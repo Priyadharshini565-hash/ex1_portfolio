@@ -1,4 +1,4 @@
-
+```css
 /* General Styles */
 * {
     margin: 0;
@@ -147,28 +147,23 @@ header {
     color: #07111e;
 }
 
+/* Profile Photo */
 .hero-image {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-shrink: 0;
 }
 
-.profile-circle {
+.profile-photo {
     width: 240px;
     height: 240px;
+    object-fit: cover;
+    object-position: center;
     border-radius: 50%;
     border: 3px solid var(--accent);
-    background: linear-gradient(135deg, #152238, #243b5a);
-    display: flex;
-    justify-content: center;
-    align-items: center;
     box-shadow: 0 0 45px rgba(56, 189, 248, 0.15);
-}
-
-.profile-circle span {
-    font-size: 65px;
-    font-weight: bold;
-    color: var(--accent);
+    display: block;
 }
 
 /* Common Section Styles */
@@ -330,6 +325,12 @@ footer {
 
     .hero {
         min-height: auto;
+        gap: 30px;
+    }
+
+    .profile-photo {
+        width: 200px;
+        height: 200px;
     }
 
     .skills-container {
@@ -353,20 +354,20 @@ footer {
     .hero {
         flex-direction: column-reverse;
         text-align: center;
-        padding-top: 55px;
+        padding: 55px 20px;
+    }
+
+    .hero-content {
+        width: 100%;
     }
 
     .hero-buttons {
         justify-content: center;
     }
 
-    .profile-circle {
+    .profile-photo {
         width: 170px;
         height: 170px;
-    }
-
-    .profile-circle span {
-        font-size: 48px;
     }
 
     .hero h2 {
@@ -386,3 +387,4 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+```
